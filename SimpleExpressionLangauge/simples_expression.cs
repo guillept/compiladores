@@ -46,6 +46,7 @@ public class Scanner //Lexical Analysis
             } else if (m.Groups[7].Success) {
                 yield return new Token(TokenCategory.BAD_TOKEN, m.Value); //la cagó
             } 
+            yield return new Token(TokenCategory.EOF, null); //EOF
         };
     }}
 public class Driver { 
