@@ -12,7 +12,7 @@
   .hash algorithm 0x00008004
   .ver  0:0:0:0
 }
-.module pow.exe // GUID = {7BB6C809-CEB1-47BF-A563-EC1BCB110948}
+.module pow.exe // GUID = {5F19AA40-D8E5-4754-B28B-8BA25B063B58}
 
 
   .class private auto ansi beforefieldinit Test
@@ -50,6 +50,25 @@
 	IL_001a:  call void class [mscorlib]System.Console::WriteLine(int32)
 	IL_001f:  ret 
     } // end of method Test::Main
+
+    // method line 3
+    .method public static hidebysig 
+           default void MainDos ()  cil managed 
+    {
+        // Method begins at RVA 0x2084
+	// Code size 32 (0x20)
+	.maxstack 2
+	.locals init (
+		int32	V_0)
+	IL_0000:  ldc.r8 5.
+	IL_0009:  ldc.r8 3.
+	IL_0012:  call float64 class [mscorlib]System.Math::Pow(float64, float64)
+	IL_0017:  conv.i4 
+	IL_0018:  stloc.0 
+	IL_0019:  ldloc.0 
+	IL_001a:  call void class [mscorlib]System.Console::WriteLine(int32)
+	IL_001f:  ret 
+    } // end of method Test::MainDos
 
   } // end of class Test
 
